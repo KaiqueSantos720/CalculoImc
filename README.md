@@ -1,11 +1,12 @@
 # Calculadora IMC
 
-- Aplicação do console para cálculo e classificação de IMC
+- Aplicação do console para cálculo e classificação de IMC, além de calcular a diferença de massa para atingir o índice ideal
 
 ## Funcionalidades
 
 - Calcula o IMC
 - Classifica o IMC
+- Calcula a diferença de massa para atingir o IMC ideal
 
 ## Tecnologias Utiizadas
 
