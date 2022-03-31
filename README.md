@@ -1,10 +1,11 @@
 # Calculadora IMC
 
-- Aplicação do console para cálculo de IMC
+- Aplicação do console para cálculo e classificação de IMC
 
 ## Funcionalidades
 
 - Calcula o IMC
+- Classifica o IMC
 
 ## Tecnologias Utiizadas
 

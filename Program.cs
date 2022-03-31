@@ -19,6 +19,40 @@ namespace CalculoImc
 
             Console.WriteLine("Olá {0} seu IMC é: {1}", nome, imc);
 
+            if(imc < 17){
+                Console.WriteLine("Classificação: Muito Abaixo do Peso");
+            }
+
+            else if(imc >= 17 && imc < 18.5)
+            {
+                Console.WriteLine("Classificação: Abaixo do Peso");
+            }
+
+            else if(18.5 <= imc && imc <= 24.9)
+            {
+                Console.WriteLine("Classificação: Peso Normal");
+            }
+            
+            else if(25 <= imc && imc <= 29.9)
+            {
+                Console.WriteLine("Classificação: Acima do Peso");
+            }
+
+            else if(30 <= imc && imc <= 34.9)
+            {
+                Console.WriteLine("Classificação: Obesidade Grau I");
+            }
+
+            else if(35 <= imc && imc <= 39.9)
+            {
+                Console.WriteLine("Classificação: Obesidade Grau II");
+            }
+
+            else
+            {
+                Console.WriteLine("Classificação: Obesidade Mórbida");
+            }
+
         }
     }
 }
