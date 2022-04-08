@@ -10,54 +10,58 @@ public class Individuo
         Altura = altura;
     }
     public double Imc { get => (Massa/(Altura * Altura));}
+    public string VerImc { get => "Olá " + Nome + " seu IMC é: " + Imc;}
+    public double PerderPeso {get => Massa-(24.9*(Altura*Altura));}
+    public double GanharPeso {get => (18.5*(Altura*Altura))-Massa;}
 
-    public void Classificacao()
+    public String Classificacao()
     {
-        if(Imc < 17){
-            Console.WriteLine("IMC: {0}", Imc);
-            Console.WriteLine("Classificação: Muito Abaixo do Peso");
-            Console.WriteLine("Você precisa ganhar {0} kg", (18.5*(Altura*Altura))-Massa);
+        if(Imc < 17)
+        {
+            return "Classificação: Muito Abaixo do Peso";
         }
 
         else if(Imc >= 17 && Imc < 18.5)
         {
-            Console.WriteLine("IMC: {0}", Imc);
-            Console.WriteLine("Classificação: Abaixo do Peso");
-            Console.WriteLine("Você precisa ganhar {0} kg", (18.5*(Altura*Altura))-Massa);
+            return "Classificação: Abaixo do Peso";
         }
 
         else if(18.5 <= Imc && Imc <= 24.9)
         {
-            Console.WriteLine("IMC: {0}", Imc);
-            Console.WriteLine("Classificação: Peso Normal");
+            return "Classificação: Peso Normal";
         }
             
         else if(25 <= Imc && Imc <= 29.9)
         {
-            Console.WriteLine("IMC: {0}", Imc);
-            Console.WriteLine("Classificação: Acima do Peso");
-            Console.WriteLine("Você precisa perder {0} kg", Massa-(24.9*(Altura*Altura)));
+            return "Classificação: Acima do Peso";
         }
 
         else if(30 <= Imc && Imc <= 34.9)
         {
-            Console.WriteLine("IMC: {0}", Imc);
-            Console.WriteLine("Classificação: Obesidade Grau I");
-            Console.WriteLine("Você precisa perder {0} kg", Massa-(24.9*(Altura*Altura)));
+            return "Classificação: Obesidade Grau I";
         }
 
         else if(35 <= Imc && Imc <= 39.9)
         {
-            Console.WriteLine("IMC: {0}", Imc);
-            Console.WriteLine("Classificação: Obesidade Grau II");
-            Console.WriteLine("Você precisa perder {0} kg", Massa-(24.9*(Altura*Altura)));
+            return "Classificação: Obesidade Grau II";
         }
 
         else
         {
-            Console.WriteLine("IMC: {0}", Imc);
-            Console.WriteLine("Classificação: Obesidade Mórbida");
-            Console.WriteLine("Você precisa perder {0} kg", Massa-(24.9*(Altura*Altura)));
+            return "Classificação: Obesidade Mórbida";
         }
+    }
+
+    public String PesoIdeal()
+    {
+        if(Imc < 18.5)
+        {
+            return "Você precisa ganhar " + GanharPeso + " kg";
+        }
+        if (Imc >= 25)
+        {
+            return "Você precisa perder " + PerderPeso + " kg";
+        }
+        return "Você está com o peso ideal";
     }
 }
