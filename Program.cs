@@ -1,13 +1,13 @@
 ﻿Console.WriteLine("Escreva seu nome");
-string? _name = Console.ReadLine();
+string? name = Console.ReadLine();
 
 Console.WriteLine("Escreva sua massa");
-double _massa = Convert.ToDouble(Console.ReadLine());
+double massa = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine("Escreva sua altura");
-double _altura = Convert.ToDouble(Console.ReadLine());
+double altura = Convert.ToDouble(Console.ReadLine());
 
-Individuo i1 = new Individuo(_name, _massa, _altura);
+Individuo i1 = new Individuo(name, massa, altura);
 Console.WriteLine(i1.VerImc);
 Console.WriteLine(i1.Classificacao());
 Console.WriteLine(i1.PesoIdeal());
